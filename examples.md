@@ -45,7 +45,7 @@ An optional third parameter "fine" increases the resolution of colors.
 
 The script puts output to the screen that already highlights the vulnerable parts in red and the (probably) non-vulnerable parts in green, but the detailed outcome is printed as an image file. Refer to that one for a closer look at the predicions. It highlights which parts might be vulnerable according to the following color chart:
 
-![color key](https://github.com/LauraWartschinski/VulnerabilityDetection/blob/master/img/colorkey.png)
+![color key](./img/colorkey.png)
 
 The following example was created using the fine resolution with the first example for the vulnerability path disclosure.
 
@@ -54,7 +54,7 @@ python3 demonstrate.py remote_code_execution 1 fine
 ```
 
 
-![Example](https://github.com/LauraWartschinski/VulnerabilityDetection/blob/master/img/exampleRemoteCodeExecution.png)
+![Example](./img/exampleRemoteCodeExecution.png)
 
 Alternatively, the script demonstrate_sourcecode.py can be used to ignore the dataset and directly load the example source code files. The outcome is essentially the same.
 
@@ -64,7 +64,7 @@ python3 demonstrate_sourcecode.py sql 3 fine
 
 There is also the possibility to take the labeling in the dataset into account. In this case, the skript can color false positives in a different color than true positives, and false negatives in a different color than true negatives. For this purpose, the script is used. It takes the same parameters as the previous one and also saves its result as a png file.
 
-![color key labeled](https://github.com/LauraWartschinski/VulnerabilityDetection/blob/master/img/colorkeylabeled.png)
+![color key labeled](./img/colorkeylabeled.png)
 
 
 The following example shows the prediction for the first  example file for the open redirect vulnerability, using labels for coloring:
@@ -75,4 +75,4 @@ python3 demonstrate_labeled.py open_redirect 1 fine
 
 You can see that both parts in the file that are vulnerable were recognized (light blue color), and most of the rest was correctly identified as not vulnerable (dark green), with some irregularities around the "edges" of the vulnerable code parts.
 
-![Example](https://github.com/LauraWartschinski/VulnerabilityDetection/blob/master/img/exampleOpenRedirect.png)
+![Example](./img/exampleOpenRedirect.png)
